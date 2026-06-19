@@ -35,7 +35,7 @@
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 ::selection{background:var(--ouro);color:var(--bg)}
-html{scrollbar-width:thin;scrollbar-color:var(--ouro) var(--bg);scroll-behavior:smooth}
+html{scrollbar-width:thin;scrollbar-color:var(--ouro) var(--bg)}
 ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--ouro);border-radius:2px}
 body{font-family:var(--body);font-weight:400;background:var(--bg);color:var(--txt);overflow-x:hidden;-webkit-font-smoothing:antialiased;letter-spacing:-.01em;
@@ -548,7 +548,7 @@ if (hasGSAP) gsap.registerPlugin(ScrollTrigger);
 var lenis = null, scrollProg = 0;
 try {
   if (typeof Lenis !== 'undefined') {
-    lenis = new Lenis({lerp:.11, smoothWheel:true});
+    lenis = new Lenis({lerp:.25, smoothWheel:true});
     lenis.on('scroll', function(e){ scrollProg = e.progress || 0; if (hasGSAP) ScrollTrigger.update(); });
     if (hasGSAP) { gsap.ticker.add(function(t){ lenis.raf(t*1000); }); gsap.ticker.lagSmoothing(0); }
     else { (function raf(t){ lenis.raf(t); requestAnimationFrame(raf); })(0); }
