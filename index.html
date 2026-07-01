@@ -203,6 +203,20 @@ h2{font-family:var(--display);font-weight:400;
 .valor-total b{color:var(--ouro);font-size:1.05rem}
 .showcase{display:flex;flex-direction:column;gap:1.1rem}
 
+/* ===== BASTIDORES ===== */
+.bastidores-stats{background:rgba(15,15,18,.8);border:1px solid rgba(232,178,58,.25);border-radius:14px;padding:2rem;display:flex;flex-direction:column;gap:1.2rem;position:relative;overflow:hidden}
+.bastidores-stats::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 50% 0%,rgba(232,178,58,.08),transparent 40%);pointer-events:none}
+.stat-item{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.05);padding-bottom:1rem;margin-bottom:.5rem}
+.stat-item:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0}
+.stat-label{font-size:.95rem;color:var(--txt);font-weight:600}
+.stat-value{font-family:var(--display);font-size:2rem;color:var(--ouro);letter-spacing:-.02em;display:flex;align-items:baseline;gap:.4rem}
+.stat-value small{font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
+.bastidores-head{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem}
+.bastidores-head svg{width:46px;height:46px;border-radius:50%;border:1px solid rgba(232,178,58,.4);padding:8px}
+.bastidores-head div{display:flex;flex-direction:column}
+.bastidores-head b{font-size:1rem;color:var(--txt)}
+.bastidores-head span{font-size:.75rem;color:var(--mut)}
+
 /* ===== PROVA ===== */
 .carrossel-wrap{position:relative;margin-top:3.5rem;max-width:680px;margin-left:auto;margin-right:auto}
 .carrossel{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;
@@ -448,6 +462,51 @@ footer{position:relative;z-index:1;border-top:1px solid var(--borda);padding:2.4
             <svg viewBox="0 0 520 200" width="92%"><rect width="520" height="200" fill="#101013"/><rect x="22" y="24" width="108" height="152" rx="4" fill="#17171B"/><rect x="146" y="24" width="108" height="152" rx="4" fill="#17171B"/><rect x="270" y="24" width="108" height="152" rx="4" fill="#17171B"/><rect x="394" y="24" width="108" height="152" rx="4" fill="#17171B"/><rect x="34" y="140" width="84" height="7" fill="#E8B23A" opacity=".8"/><rect x="158" y="140" width="84" height="7" fill="#E8B23A" opacity=".8"/><rect x="282" y="140" width="84" height="7" fill="#E8B23A" opacity=".8"/><rect x="406" y="140" width="84" height="7" fill="#E8B23A" opacity=".8"/></svg>
           </div>
           <span class="rotulo">Os módulos — Reconexão · Visão · Materialização</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BASTIDORES / VALIDAÇÃO -->
+<section class="sec" id="bastidores">
+  <div class="container">
+    <div class="tag">A Validação</div>
+    <h2>Construído do zero<br>em apenas 30 dias.</h2>
+    <div class="caderno-grid">
+      <div class="caderno-txt">
+        <p>A Ruptura não é um conceito teórico. Tudo o que você vê aqui — a <b>inteligência artificial</b>, o <b>site</b>, a <b>área de membros</b>, e o <b>funil de vendas</b> — foi criado em 30 dias.</p>
+        <p>Durante esse exato período de criação, o conteúdo gerado trouxe mais de <b>4,3 milhões de visualizações</b> e <b>10.500 novos seguidores</b> orgânicos. Desde a concepção da ideia, os estudos sobre a área de membros, a estruturação e a venda: tudo feito em 30 dias.</p>
+        <p>Isso não é sorte. Existe uma estrutura de criação de produtos e engajamento trabalhando nos bastidores. E todo esse sistema de como transformar audiência em oportunidades está dissecado dentro do <b>Módulo Bônus: Estratégias de Venda e Conteúdo</b>.</p>
+        <ul class="lista">
+          <li>A estratégia por trás dos vídeos virais.</li>
+          <li>Como desenvolver seus produtos rapidamente.</li>
+          <li>A estrutura de funil usada neste exato site.</li>
+        </ul>
+      </div>
+      <div class="showcase">
+        <div class="bastidores-stats">
+          <div class="bastidores-head">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="#E8B23A" stroke-width="1.5"/><path d="M12 7v5l3 3" fill="none" stroke="#E8B23A" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <div><b>Painel Profissional</b><span>Últimos 30 dias de estruturação</span></div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Visualizações</span>
+            <span class="stat-value">4,3<small>mi</small></span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Interações</span>
+            <span class="stat-value">911<small>mil</small></span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Novos seguidores</span>
+            <span class="stat-value">10,5<small>mil</small></span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Tempo de execução</span>
+            <span class="stat-value">30<small>dias</small></span>
+          </div>
+          <span class="rotulo" style="position:relative;bottom:0;left:0;margin-top:1rem;display:inline-block;text-align:center;width:100%">Resultados da conta principal</span>
         </div>
       </div>
     </div>
@@ -718,7 +777,7 @@ if (hasGSAP) {
     gsap.to('.mw',{opacity:1,stagger:.05,scrollTrigger:{trigger:'.manifesto',start:'top 62%',end:'bottom 45%',scrub:true}});
   })();
 
-  document.querySelectorAll('.etapa,.itens li,.prova,.midia,.caderno-txt,.oferta-card,.faq-item,.valor-total').forEach(function(el){
+  document.querySelectorAll('.etapa,.itens li,.prova,.midia,.caderno-txt,.oferta-card,.faq-item,.valor-total,.bastidores-stats').forEach(function(el){
     gsap.fromTo(el,{y:42,opacity:0},{y:0,opacity:1,duration:.8,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 88%'}});
   });
   document.querySelectorAll('h2,.tag').forEach(function(el){
